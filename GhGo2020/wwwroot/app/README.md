@@ -1,55 +1,134 @@
-# Phaser 3 Webpack Project Template
+<p align="center">
+  <img width=60% src="assets/github/phaser3-typescript.png">
+</p>
 
-A Phaser 3 project template with ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/)
-that includes hot-reloading for development and production-ready builds.
+<p align="center">
+  Phaser 3 Game Examples written in TypeScript.
+</p>
 
-Loading images via JavaScript module `import` is also supported.
+<div align="center">
 
-## Requirements
+  ![Dependencies](https://img.shields.io/david/digitsensitive/phaser3-typescript.svg)
+  ![GitHub issues](https://img.shields.io/github/issues/digitsensitive/phaser3-typescript.svg)
+  ![GitHub stars](https://img.shields.io/github/stars/digitsensitive/phaser3-typescript.svg)
+  ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+  ![Code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+  ![GitHub licence](https://img.shields.io/github/license/digitsensitive/phaser3-typescript.svg)
 
-[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
+</div>
 
-## Available Commands
+<p align="center">
+  <sub>
+    Examples made with ❤︎ by <a href="https://github.com/digitsensitive">digitsensitive</a></br>
+    Framework created by <a href="https://github.com/photonstorm">Photonstorm</a>
+  </sub>
+</p>
 
-| Command | Description |
-|---------|-------------|
-| `npm install` | Install project dependencies |
-| `npm start` | Build project and open web server running project |
-| `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
+# Phaser 3 and TypeScript
 
-## Writing Code
+[Phaser](https://github.com/photonstorm/phaser) is a wonderful, fast and
+free open source HTML5 game framework.
+Here you will find everything you need to develop games with Phaser 3
+in TypeScript. Have fun discovering, developing and playing!
+Ideas and corrections are highly desirable to constantly
+improve this repository!
 
-After cloning the repo, run `npm install` from your project directory. Then, you can start the local development
-server by running `npm start`.
+<div align="center">
+<a href="https://www.buymeacoffee.com/JZDVjsT26" target="blank">
+<img src="https://www.buymeacoffee.com/assets/img/custom_images/black_img.png" alt="Buy Me A Coffee" style="height: auto !important; width: auto !important;"></a>
+</div>
 
+## Getting started
 
-After starting the development server with `npm start`, you can edit any files in the `src` folder
-and webpack will automatically recompile and reload your server (available at `http://localhost:8080`
-by default).
+### Prerequisites
 
-## Customizing Template
+```
+Download and install npm with Node.js @ https://nodejs.org/en
+```
 
-### Babel
-You can write modern ES6+ JavaScript and Babel will transpile it to a version of JavaScript that you
-want your project to support. The targeted browsers are set in the `.babelrc` file and the default currently
-targets all browsers with total usage over "0.25%" but excludes IE11 and Opera Mini.
+### Installing
 
-  ```
-  "browsers": [
-    ">0.25%",
-    "not ie 11",
-    "not op_mini all"
-  ]
-  ```
+Select a folder, navigate to it, and clone this repository
+with this command-line:
 
-### Webpack
-If you want to customize your build, such as adding a new webpack loader or plugin (i.e. for loading CSS or fonts), you can
-modify the `webpack/base.js` file for cross-project changes, or you can modify and/or create
-new configuration files and target them in specific npm tasks inside of `package.json'.
+```
+git clone https://github.com/digitsensitive/phaser3-typescript.git
+```
 
-## Deploying Code
-After you run the `npm run build` command, your code will be built into a single bundle located at 
-`dist/bundle.min.js` along with any other assets you project depended. 
+Install the dependencies with this command-line:
 
-If you put the contents of the `dist` folder in a publicly-accessible location (say something like `http://mycoolserver.com`), 
-you should be able to open `http://mycoolserver.com/index.html` and play your game.
+```
+npm install
+```
+
+### Building and Running
+
+Perform a quick build (bundle.js) and start server:
+
+```
+npm run dev
+```
+
+## Game Examples
+
+Check the `package.json` for the correct scripts to start projects.
+For example you can start the `Candy Crush` project with:
+
+```
+npm run candy-crush
+```
+
+- [Coin Runner](https://github.com/digitsensitive/phaser3-typescript/blob/master/src/games/coin-runner)
+- [Alpha Adjust](https://github.com/digitsensitive/phaser3-typescript/blob/master/src/games/alpha-adjust)
+- [Snake](https://github.com/digitsensitive/phaser3-typescript/blob/master/src/games/snake)
+- [Blockade](https://github.com/digitsensitive/phaser3-typescript/blob/master/src/games/blockade)
+- [Asteroid](https://github.com/digitsensitive/phaser3-typescript/blob/master/src/games/asteroid)
+- [Flappy Bird](https://github.com/digitsensitive/phaser3-typescript/blob/master/src/games/flappy-bird)
+- [Space Invaders](https://github.com/digitsensitive/phaser3-typescript/blob/master/src/games/space-invaders)
+- [Super Mario Land](https://github.com/digitsensitive/phaser3-typescript/blob/master/src/games/super-mario-land)
+- [Candy Crush](https://github.com/digitsensitive/phaser3-typescript/blob/master/src/games/candy-crush)
+
+If you have any suggestion for a next game example, let me know!
+
+## Helpful tools
+
+- [Leshy SpriteSheet Tool](https://www.leshylabs.com/apps/sstool)
+- [Tiled](https://www.mapeditor.org)
+- [Littera](http://kvazars.com/littera)
+- [Tile Extruder](https://github.com/sporadic-labs/tile-extruder)
+
+## TypeScript Configuration
+
+### tsconfig.json
+
+The following `Compiler Options` have been set in the `tsconfig.json` file:
+
+| Option | Value     |
+| :------------- | :------------- |
+| target       | ES2016 |
+| module       | CommonJS |
+| sourceMap    | true |
+| noImplicitAny| true [WIP] |
+| strict       | true [WIP] |
+
+You can see the complete list of the available options at [here](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+Interesting read about [setting up a nodejs-project](https://codeburst.io/tips-for-setting-up-a-typescript-nodejs-project-5d1c48dc1a2d).
+
+## Changelog
+
+[Learn about the latest improvements](https://github.com/digitsensitive/phaser3-typescript/blob/master/CHANGELOG.md)
+
+## Contributing
+
+Want to correct a bug, contribute some code, or improve the codes? Excellent! Let me know!
+Please read [CONTRIBUTING.md](https://github.com/digitsensitive/phaser3-typescript/blob/master/CONTRIBUTING.md) for details on our code of conduct.
+
+I would like to thank the following persons for their support and help:
+[@FakeBarenziah](https://github.com/FakeBarenziah)
+[@emedws](https://github.com/emedws)
+[@evanlanglais](https://github.com/evanlanglais)
+[@iliyaZelenko](https://github.com/iliyaZelenko)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/digitsensitive/phaser3-typescript/blob/master/LICENSE) file for details.
